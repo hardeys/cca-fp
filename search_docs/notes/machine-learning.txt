@@ -1,0 +1,10 @@
+Machine learning is a branch of artificial intelligence that enables systems to learn from data.
+Supervised learning uses labeled data to train models for prediction tasks.
+Unsupervised learning finds patterns in unlabeled data through clustering and dimensionality reduction.
+Neural networks are inspired by biological neurons and form the basis of deep learning.
+Training data is used to teach models, while test data evaluates their performance.
+Overfitting occurs when a model learns training data too well and fails on new data.
+Regularization techniques prevent overfitting by adding constraints to model complexity.
+Loss functions measure the difference between predicted and actual values during training.
+Gradient descent is an optimization algorithm used to minimize loss functions.
+Popular ML frameworks include TensorFlow, PyTorch, Scikit-learn, and Keras.

@@ -1,0 +1,10 @@
+Cloud computing provides computing resources over the internet on a pay-as-you-go basis.
+IaaS (Infrastructure as a Service) provides virtualized computing resources over the internet.
+PaaS (Platform as a Service) offers a platform to develop, test, and deploy applications.
+SaaS (Software as a Service) delivers applications via the internet without local installation.
+AWS (Amazon Web Services) is the largest cloud platform with services like EC2 and S3.
+Google Cloud Platform offers data analytics, machine learning, and compute services.
+Microsoft Azure provides hybrid cloud capabilities integrated with Microsoft services.
+Load balancing distributes traffic across multiple servers to ensure reliability and performance.
+Auto-scaling automatically adjusts resources based on demand to optimize costs.
+Containerization using Docker allows applications to run consistently across different environments.

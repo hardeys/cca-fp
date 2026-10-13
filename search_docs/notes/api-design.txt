@@ -1,0 +1,10 @@
+API stands for Application Programming Interface and defines how software components interact.
+REST APIs use HTTP methods like GET, POST, PUT, and DELETE for operations.
+JSON is the most common format for exchanging data in modern web APIs.
+API versioning helps maintain backward compatibility as APIs evolve over time.
+Rate limiting prevents abuse by restricting the number of requests per time period.
+Authentication ensures only authorized users can access protected API resources.
+CORS (Cross-Origin Resource Sharing) allows APIs to accept requests from different domains.
+API documentation is crucial for developers to understand endpoints and parameters.
+GraphQL is an alternative to REST that allows clients to request exactly the data they need.
+API gateways act as intermediaries between clients and backend services for better management.

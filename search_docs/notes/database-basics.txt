@@ -1,0 +1,10 @@
+A database is an organized collection of structured data stored electronically in a computer system.
+SQL (Structured Query Language) is used to manage relational databases.
+NoSQL databases provide flexible schemas for unstructured or semi-structured data.
+Primary keys uniquely identify each record in a database table.
+Foreign keys establish relationships between tables in a relational database.
+Indexing improves query performance by creating sorted lookup structures.
+Normalization reduces data redundancy and improves data integrity.
+Transactions ensure data consistency by grouping related operations together.
+ACID properties (Atomicity, Consistency, Isolation, Durability) guarantee reliable transactions.
+Popular databases include PostgreSQL, MySQL, MongoDB, and Redis for different use cases.

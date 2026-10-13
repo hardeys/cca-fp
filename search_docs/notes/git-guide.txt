@@ -1,0 +1,10 @@
+Git is a distributed version control system used for tracking changes in code.
+Git was created by Linus Torvalds in 2005 for Linux kernel development.
+Common git commands include clone, commit, push, pull, and merge.
+A git repository stores all project files and their complete history.
+Branches in git allow parallel development without affecting the main codebase.
+The main branch traditionally contains production-ready code.
+Git tags are used to mark specific versions or release points in history.
+Merge conflicts occur when changes in different branches affect the same lines.
+Rebasing rewrites commit history by reapplying commits on top of another branch.
+Git hooks are scripts that run automatically at certain points in the git workflow.
