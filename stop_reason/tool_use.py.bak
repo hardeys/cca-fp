@@ -1,0 +1,71 @@
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+from anthropic import Anthropic
+
+load_dotenv(Path(__file__).parent.parent / ".env")
+
+#read anthropic key from the env variable
+anth_key=(os.getenv("ANTHROPIC_API_KEY"))
+
+#create a enthropic client
+
+client = Anthropic(api_key=anth_key)
+MODEL = "claude-opus-5-5"
+conv_messages = []
+
+#print Response from Cluade
+def printmessage(title, message):
+    print("-"*60)
+    print(title)
+    print(f'Stop Reason is: {message.stop_reason}')
+    print(f'Output Token used are {message.usage.output_tokens}')
+    print(f'Input Token used are {message.usage.input_tokens}')
+    for block in message.content:
+        if (block.type == "text"):
+            print(f'Content type is {block.type}')
+            print(f'content: {block.text}')
+        elif (block.type == "tool_use"):
+            print (f'Tool Name: {block.name}')
+            print (f'Tool id: {block.id}')
+            print (f'Tool input: {block.input}')
+    print()
+
+
+# end_turn stop reason use case
+conv_messages.append({"role":"user","content":"Hello Claude, today we will be checking some weather stats"})
+message = client.messages.create(
+    model = MODEL,
+    max_tokens = 1024,
+    messages = conv_messages)
+
+printmessage("1. stop_reason = end_turn: ", message)
+
+conv_messages.append({"role":"assistant","content":message.content})
+
+# defining tools
+
+tools = [
+
+    {
+        "name": "get_weather",
+        "description":"Get the current weather of the city",
+        "input_schema": {
+            "type":"object",
+            "properties":{
+                "city":{"type":"string", "description":"city name"}
+            },
+            "required":["city"]
+        }       
+    }
+]
+
+conv_messages.append({"role":"user","content":"What is the weather in Melbourne"})
+
+message = client.messages.create(
+    model=MODEL,
+    max_tokens=1024,
+    tools=tools,
+    messages=conv_messages)
+
+printmessage("2. stop_reason = tool_use",message)
